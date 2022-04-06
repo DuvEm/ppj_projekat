@@ -1,0 +1,33 @@
+C:\Users\GW\AppData\Local\Temporary Projects\Projektni zadatak\bin\Debug\Projektni zadatak.exe
+C:\Users\GW\AppData\Local\Temporary Projects\Projektni zadatak\bin\Debug\Projektni zadatak.pdb
+C:\Users\GW\AppData\Local\Temporary Projects\Projektni zadatak\obj\x86\Debug\Projektni_zadatak.Form1.resources
+C:\Users\GW\AppData\Local\Temporary Projects\Projektni zadatak\obj\x86\Debug\Projektni_zadatak.Properties.Resources.resources
+C:\Users\GW\AppData\Local\Temporary Projects\Projektni zadatak\obj\x86\Debug\Projektni zadatak.csproj.GenerateResource.Cache
+C:\Users\GW\AppData\Local\Temporary Projects\Projektni zadatak\obj\x86\Debug\Projektni zadatak.exe
+C:\Users\GW\AppData\Local\Temporary Projects\Projektni zadatak\obj\x86\Debug\Projektni zadatak.pdb
+C:\Users\GW\Desktop\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni zadatak.exe
+C:\Users\GW\Desktop\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni zadatak.pdb
+C:\Users\GW\Desktop\Projektni zadatak\Projektni zadatak\bin\Debug\Projektni zadatak.exe
+C:\Users\GW\Desktop\Projektni zadatak\Projektni zadatak\bin\Debug\Projektni zadatak.pdb
+C:\Users\GW\Desktop\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni zadatak.csprojResolveAssemblyReference.cache
+C:\Users\GW\Desktop\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni_zadatak.Form1.resources
+C:\Users\GW\Desktop\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni_zadatak.Form2.resources
+C:\Users\GW\Desktop\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni_zadatak.Form3.resources
+C:\Users\GW\Desktop\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni_zadatak.Form4.resources
+C:\Users\GW\Desktop\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni_zadatak.Form5.resources
+C:\Users\GW\Desktop\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni_zadatak.Form6.resources
+C:\Users\GW\Desktop\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni_zadatak.Properties.Resources.resources
+C:\Users\GW\Desktop\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni zadatak.csproj.GenerateResource.Cache
+C:\Users\emird\OneDrive\Desktop\PPJ projekat\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni zadatak.exe
+C:\Users\emird\OneDrive\Desktop\PPJ projekat\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni zadatak.pdb
+C:\Users\emird\OneDrive\Desktop\PPJ projekat\Projektni zadatak\Projektni zadatak\bin\Debug\Projektni zadatak.exe
+C:\Users\emird\OneDrive\Desktop\PPJ projekat\Projektni zadatak\Projektni zadatak\bin\Debug\Projektni zadatak.pdb
+C:\Users\emird\OneDrive\Desktop\PPJ projekat\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni zadatak.csprojResolveAssemblyReference.cache
+C:\Users\emird\OneDrive\Desktop\PPJ projekat\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni_zadatak.Form1.resources
+C:\Users\emird\OneDrive\Desktop\PPJ projekat\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni_zadatak.Form2.resources
+C:\Users\emird\OneDrive\Desktop\PPJ projekat\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni_zadatak.Form3.resources
+C:\Users\emird\OneDrive\Desktop\PPJ projekat\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni_zadatak.Form4.resources
+C:\Users\emird\OneDrive\Desktop\PPJ projekat\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni_zadatak.Form5.resources
+C:\Users\emird\OneDrive\Desktop\PPJ projekat\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni_zadatak.Form6.resources
+C:\Users\emird\OneDrive\Desktop\PPJ projekat\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni_zadatak.Properties.Resources.resources
+C:\Users\emird\OneDrive\Desktop\PPJ projekat\Projektni zadatak\Projektni zadatak\obj\x86\Debug\Projektni zadatak.csproj.GenerateResource.Cache
