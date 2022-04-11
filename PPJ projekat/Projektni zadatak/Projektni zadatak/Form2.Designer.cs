@@ -272,6 +272,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form2";
             this.Text = "Kreiranje / Ažuriranje kupca";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

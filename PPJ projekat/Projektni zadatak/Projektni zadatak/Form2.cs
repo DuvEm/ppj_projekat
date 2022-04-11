@@ -15,5 +15,12 @@ namespace Projektni_zadatak
         {
             InitializeComponent();
         }
+
+        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form1 fr1 = new Form1();
+            fr1.PostaviStatusLogout();
+            Application.Exit();
+        }
     }
 }
