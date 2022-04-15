@@ -28,7 +28,7 @@ namespace Projektni_zadatak
             String korisnickoIme = textBoxKorisnickoIme.Text;
             String sifra = textBoxSifra.Text;
 
-            String query = "SELECT pass, CONCAT(ime, ' ', prezime), login_status " +
+            String query = "SELECT pass, CONCAT(ime, ' ', prezime), login_status, uloga " +
                 " FROM Kupac WHERE user ='" + korisnickoIme + "' ";
 
             try
@@ -52,17 +52,26 @@ namespace Projektni_zadatak
                     String pass = reader[0].ToString();
                     String imePrez = reader[1].ToString();
                     String loginStatus = reader[2].ToString();
+                    String uloga = reader[3].ToString();
                     if (loginStatus == "1")
                     {
                         errorProvider1.SetError(buttonPrijava, "Korisnik je već logovan!!!");
                     }
-                    else if (sifra == pass)
+                    else if (sifra == pass && uloga=="admin")
                     {
                         MessageBox.Show("Uspješno ste logovani " + imePrez);
                         PostaviStatusLogin();
                         Form2 fr2 = new Form2();
                         this.Hide();
                         fr2.Show();
+                    }
+                    else if (sifra == pass && uloga == "kupac")
+                    {
+                        MessageBox.Show("Uspješno ste logovani " + imePrez);
+                        PostaviStatusLogin();
+                        Form5 fr5 = new Form5();
+                        this.Hide();
+                        fr5.Show();
                     }
                     else
                     {
@@ -124,6 +133,5 @@ namespace Projektni_zadatak
         {
             Application.Exit();
         }
-
     }
 }

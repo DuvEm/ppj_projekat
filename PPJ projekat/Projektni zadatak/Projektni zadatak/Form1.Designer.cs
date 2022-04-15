@@ -68,6 +68,7 @@
             this.textBoxSifra.Name = "textBoxSifra";
             this.textBoxSifra.Size = new System.Drawing.Size(100, 20);
             this.textBoxSifra.TabIndex = 15;
+            this.textBoxSifra.UseSystemPasswordChar = true;
             // 
             // textBoxKorisnickoIme
             // 

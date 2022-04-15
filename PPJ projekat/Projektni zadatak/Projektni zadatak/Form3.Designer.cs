@@ -47,9 +47,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.meniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kreiranjeažuriranjeNovogKupcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prikazbrisanjeNarudžbeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.odjavaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.izlazIzAplikacijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -73,9 +80,9 @@
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 30);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(495, 401);
+            this.groupBox1.Size = new System.Drawing.Size(495, 383);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dodavanje/ažuriranje artikala";
@@ -226,19 +233,74 @@
             this.button2.Text = "Dodavanje artikla";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.meniToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(519, 24);
+            this.menuStrip1.TabIndex = 26;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // meniToolStripMenuItem
+            // 
+            this.meniToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kreiranjeažuriranjeNovogKupcaToolStripMenuItem,
+            this.prikazbrisanjeNarudžbeToolStripMenuItem,
+            this.odjavaToolStripMenuItem,
+            this.izlazIzAplikacijeToolStripMenuItem});
+            this.meniToolStripMenuItem.Name = "meniToolStripMenuItem";
+            this.meniToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.meniToolStripMenuItem.Text = "Meni";
+            // 
+            // kreiranjeažuriranjeNovogKupcaToolStripMenuItem
+            // 
+            this.kreiranjeažuriranjeNovogKupcaToolStripMenuItem.Name = "kreiranjeažuriranjeNovogKupcaToolStripMenuItem";
+            this.kreiranjeažuriranjeNovogKupcaToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.kreiranjeažuriranjeNovogKupcaToolStripMenuItem.Text = "Kreiranje/ažuriranje novog kupca";
+            this.kreiranjeažuriranjeNovogKupcaToolStripMenuItem.Click += new System.EventHandler(this.kreiranjeažuriranjeNovogKupcaToolStripMenuItem_Click);
+            // 
+            // prikazbrisanjeNarudžbeToolStripMenuItem
+            // 
+            this.prikazbrisanjeNarudžbeToolStripMenuItem.Name = "prikazbrisanjeNarudžbeToolStripMenuItem";
+            this.prikazbrisanjeNarudžbeToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.prikazbrisanjeNarudžbeToolStripMenuItem.Text = "Prikaz/brisanje narudžbe";
+            this.prikazbrisanjeNarudžbeToolStripMenuItem.Click += new System.EventHandler(this.prikazbrisanjeNarudžbeToolStripMenuItem_Click);
+            // 
+            // odjavaToolStripMenuItem
+            // 
+            this.odjavaToolStripMenuItem.Name = "odjavaToolStripMenuItem";
+            this.odjavaToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.odjavaToolStripMenuItem.Text = "Odjava";
+            this.odjavaToolStripMenuItem.Click += new System.EventHandler(this.odjavaToolStripMenuItem_Click);
+            // 
+            // izlazIzAplikacijeToolStripMenuItem
+            // 
+            this.izlazIzAplikacijeToolStripMenuItem.Name = "izlazIzAplikacijeToolStripMenuItem";
+            this.izlazIzAplikacijeToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.izlazIzAplikacijeToolStripMenuItem.Text = "Izlaz iz aplikacije";
+            this.izlazIzAplikacijeToolStripMenuItem.Click += new System.EventHandler(this.izlazIzAplikacijeToolStripMenuItem_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(519, 427);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form3";
             this.Text = "Dodavanje / Ažuriranje artikala";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form3_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -263,5 +325,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem meniToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kreiranjeažuriranjeNovogKupcaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prikazbrisanjeNarudžbeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem odjavaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem izlazIzAplikacijeToolStripMenuItem;
     }
 }
