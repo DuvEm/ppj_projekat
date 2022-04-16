@@ -30,27 +30,27 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxIDKupca = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxAdresa = new System.Windows.Forms.TextBox();
+            this.textBoxIme = new System.Windows.Forms.TextBox();
+            this.textBoxPrezime = new System.Windows.Forms.TextBox();
+            this.buttonTrazi = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxPrezime2 = new System.Windows.Forms.TextBox();
+            this.textBoxTelefon = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxIme2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBoxSifra = new System.Windows.Forms.TextBox();
+            this.textBoxGrad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.buttonAzuriranjeKupca = new System.Windows.Forms.Button();
+            this.buttonKreiranjeKupca = new System.Windows.Forms.Button();
+            this.textBoxKorIme = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.meniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodavanjeažuriranjeNovogArtiklaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,27 +65,27 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxIDKupca);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.textBoxAdresa);
+            this.groupBox1.Controls.Add(this.textBoxIme);
+            this.groupBox1.Controls.Add(this.textBoxPrezime);
+            this.groupBox1.Controls.Add(this.buttonTrazi);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.textBoxPrezime2);
+            this.groupBox1.Controls.Add(this.textBoxTelefon);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.textBoxIme2);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox10);
+            this.groupBox1.Controls.Add(this.textBoxSifra);
+            this.groupBox1.Controls.Add(this.textBoxGrad);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.buttonAzuriranjeKupca);
+            this.groupBox1.Controls.Add(this.buttonKreiranjeKupca);
+            this.groupBox1.Controls.Add(this.textBoxKorIme);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 27);
             this.groupBox1.Name = "groupBox1";
@@ -102,12 +102,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(460, 192);
             this.dataGridView1.TabIndex = 22;
             // 
-            // textBox1
+            // textBoxIDKupca
             // 
-            this.textBox1.Location = new System.Drawing.Point(218, 410);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.textBoxIDKupca.Location = new System.Drawing.Point(218, 410);
+            this.textBoxIDKupca.Name = "textBoxIDKupca";
+            this.textBoxIDKupca.Size = new System.Drawing.Size(100, 20);
+            this.textBoxIDKupca.TabIndex = 0;
             // 
             // label6
             // 
@@ -127,35 +127,36 @@
             this.label8.TabIndex = 20;
             this.label8.Text = "ID kupca:";
             // 
-            // textBox7
+            // textBoxAdresa
             // 
-            this.textBox7.Location = new System.Drawing.Point(73, 321);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 6;
+            this.textBoxAdresa.Location = new System.Drawing.Point(73, 321);
+            this.textBoxAdresa.Name = "textBoxAdresa";
+            this.textBoxAdresa.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAdresa.TabIndex = 6;
             // 
-            // textBox8
+            // textBoxIme
             // 
-            this.textBox8.Location = new System.Drawing.Point(6, 19);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 7;
+            this.textBoxIme.Location = new System.Drawing.Point(6, 19);
+            this.textBoxIme.Name = "textBoxIme";
+            this.textBoxIme.Size = new System.Drawing.Size(100, 20);
+            this.textBoxIme.TabIndex = 7;
             // 
-            // textBox9
+            // textBoxPrezime
             // 
-            this.textBox9.Location = new System.Drawing.Point(112, 19);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 8;
+            this.textBoxPrezime.Location = new System.Drawing.Point(112, 19);
+            this.textBoxPrezime.Name = "textBoxPrezime";
+            this.textBoxPrezime.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPrezime.TabIndex = 8;
             // 
-            // button1
+            // buttonTrazi
             // 
-            this.button1.Location = new System.Drawing.Point(218, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Traži";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonTrazi.Location = new System.Drawing.Point(218, 19);
+            this.buttonTrazi.Name = "buttonTrazi";
+            this.buttonTrazi.Size = new System.Drawing.Size(75, 23);
+            this.buttonTrazi.TabIndex = 10;
+            this.buttonTrazi.Text = "Traži";
+            this.buttonTrazi.UseVisualStyleBackColor = true;
+            this.buttonTrazi.Click += new System.EventHandler(this.buttonTrazi_Click);
             // 
             // label4
             // 
@@ -184,19 +185,19 @@
             this.label3.TabIndex = 15;
             this.label3.Text = "Grad:";
             // 
-            // textBox6
+            // textBoxPrezime2
             // 
-            this.textBox6.Location = new System.Drawing.Point(73, 272);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 5;
+            this.textBoxPrezime2.Location = new System.Drawing.Point(73, 272);
+            this.textBoxPrezime2.Name = "textBoxPrezime2";
+            this.textBoxPrezime2.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPrezime2.TabIndex = 5;
             // 
-            // textBox5
+            // textBoxTelefon
             // 
-            this.textBox5.Location = new System.Drawing.Point(330, 251);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(127, 20);
-            this.textBox5.TabIndex = 4;
+            this.textBoxTelefon.Location = new System.Drawing.Point(330, 251);
+            this.textBoxTelefon.Name = "textBoxTelefon";
+            this.textBoxTelefon.Size = new System.Drawing.Size(127, 20);
+            this.textBoxTelefon.TabIndex = 4;
             // 
             // label1
             // 
@@ -207,12 +208,12 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Ime:";
             // 
-            // textBox3
+            // textBoxIme2
             // 
-            this.textBox3.Location = new System.Drawing.Point(73, 246);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.textBoxIme2.Location = new System.Drawing.Point(73, 246);
+            this.textBoxIme2.Name = "textBoxIme2";
+            this.textBoxIme2.Size = new System.Drawing.Size(100, 20);
+            this.textBoxIme2.TabIndex = 2;
             // 
             // label7
             // 
@@ -223,19 +224,19 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "Šifra:";
             // 
-            // textBox2
+            // textBoxSifra
             // 
-            this.textBox2.Location = new System.Drawing.Point(330, 298);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(127, 20);
-            this.textBox2.TabIndex = 1;
+            this.textBoxSifra.Location = new System.Drawing.Point(330, 298);
+            this.textBoxSifra.Name = "textBoxSifra";
+            this.textBoxSifra.Size = new System.Drawing.Size(127, 20);
+            this.textBoxSifra.TabIndex = 1;
             // 
-            // textBox10
+            // textBoxGrad
             // 
-            this.textBox10.Location = new System.Drawing.Point(73, 295);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 9;
+            this.textBoxGrad.Location = new System.Drawing.Point(73, 295);
+            this.textBoxGrad.Name = "textBoxGrad";
+            this.textBoxGrad.Size = new System.Drawing.Size(100, 20);
+            this.textBoxGrad.TabIndex = 9;
             // 
             // label2
             // 
@@ -246,30 +247,32 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Prezime:";
             // 
-            // button3
+            // buttonAzuriranjeKupca
             // 
-            this.button3.Location = new System.Drawing.Point(330, 400);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(127, 38);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Ažuriranje kupca";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonAzuriranjeKupca.Location = new System.Drawing.Point(330, 400);
+            this.buttonAzuriranjeKupca.Name = "buttonAzuriranjeKupca";
+            this.buttonAzuriranjeKupca.Size = new System.Drawing.Size(127, 38);
+            this.buttonAzuriranjeKupca.TabIndex = 12;
+            this.buttonAzuriranjeKupca.Text = "Ažuriranje kupca";
+            this.buttonAzuriranjeKupca.UseVisualStyleBackColor = true;
+            this.buttonAzuriranjeKupca.Click += new System.EventHandler(this.buttonAzuriranjeKupca_Click);
             // 
-            // button2
+            // buttonKreiranjeKupca
             // 
-            this.button2.Location = new System.Drawing.Point(330, 355);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 39);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Kreiranje kupca";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonKreiranjeKupca.Location = new System.Drawing.Point(330, 355);
+            this.buttonKreiranjeKupca.Name = "buttonKreiranjeKupca";
+            this.buttonKreiranjeKupca.Size = new System.Drawing.Size(127, 39);
+            this.buttonKreiranjeKupca.TabIndex = 11;
+            this.buttonKreiranjeKupca.Text = "Kreiranje kupca";
+            this.buttonKreiranjeKupca.UseVisualStyleBackColor = true;
+            this.buttonKreiranjeKupca.Click += new System.EventHandler(this.buttonKreiranjeKupca_Click);
             // 
-            // textBox4
+            // textBoxKorIme
             // 
-            this.textBox4.Location = new System.Drawing.Point(330, 275);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(127, 20);
-            this.textBox4.TabIndex = 3;
+            this.textBoxKorIme.Location = new System.Drawing.Point(330, 275);
+            this.textBoxKorIme.Name = "textBoxKorIme";
+            this.textBoxKorIme.Size = new System.Drawing.Size(127, 20);
+            this.textBoxKorIme.TabIndex = 3;
             // 
             // menuStrip1
             // 
@@ -280,6 +283,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(503, 24);
             this.menuStrip1.TabIndex = 25;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // meniToolStripMenuItem
             // 
@@ -331,6 +335,7 @@
             this.Name = "Form2";
             this.Text = "Kreiranje / Ažuriranje kupca";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -345,27 +350,27 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxIDKupca;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxAdresa;
+        private System.Windows.Forms.TextBox textBoxIme;
+        private System.Windows.Forms.TextBox textBoxPrezime;
+        private System.Windows.Forms.Button buttonTrazi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxPrezime2;
+        private System.Windows.Forms.TextBox textBoxTelefon;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxIme2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBoxSifra;
+        private System.Windows.Forms.TextBox textBoxGrad;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button buttonAzuriranjeKupca;
+        private System.Windows.Forms.Button buttonKreiranjeKupca;
+        private System.Windows.Forms.TextBox textBoxKorIme;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem meniToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodavanjeažuriranjeNovogArtiklaToolStripMenuItem;

@@ -34,21 +34,18 @@ namespace Projektni_zadatak
         {
             this.Hide();
             Form1 fr1 = new Form1();
-            fr1.PostaviStatusLogout();
             fr1.Show();
         }
 
         private void izlazIzAplikacijeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form1 fr1 = new Form1();
-            fr1.PostaviStatusLogout();
             Application.Exit();
         }
 
         private void Form4_FormClosed(object sender, FormClosedEventArgs e)
         {
             Form1 fr1 = new Form1();
-            fr1.PostaviStatusLogout();
             Application.Exit();
         }
     }

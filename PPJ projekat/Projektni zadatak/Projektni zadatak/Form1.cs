@@ -18,7 +18,7 @@ namespace Projektni_zadatak
         }
 
         public static String kupacID;
-        static String konekcioniString = "Server=localhost; Port=3306; Database=ppj_projekatt; " +
+        public static String konekcioniString = "Server=localhost; Port=3306; Database=ppj_projekatt; " +
                     "Uid=root; Pwd=emir1.";
 
         private void buttonPrijava_Click(object sender, EventArgs e)
@@ -28,7 +28,7 @@ namespace Projektni_zadatak
             String korisnickoIme = textBoxKorisnickoIme.Text;
             String sifra = textBoxSifra.Text;
 
-            String query = "SELECT pass, CONCAT(ime, ' ', prezime), login_status, uloga " +
+            String query = "SELECT pass, CONCAT(ime, ' ', prezime), kupac_id" +
                 " FROM Kupac WHERE user ='" + korisnickoIme + "' ";
 
             try
@@ -51,24 +51,17 @@ namespace Projektni_zadatak
                 {
                     String pass = reader[0].ToString();
                     String imePrez = reader[1].ToString();
-                    String loginStatus = reader[2].ToString();
-                    String uloga = reader[3].ToString();
-                    if (loginStatus == "1")
-                    {
-                        errorProvider1.SetError(buttonPrijava, "Korisnik je već logovan!!!");
-                    }
-                    else if (sifra == pass && uloga=="admin")
+                    String kupac_id = reader[2].ToString();
+                    if (sifra == pass && kupac_id=="1")
                     {
                         MessageBox.Show("Uspješno ste logovani " + imePrez);
-                        PostaviStatusLogin();
                         Form2 fr2 = new Form2();
                         this.Hide();
                         fr2.Show();
                     }
-                    else if (sifra == pass && uloga == "kupac")
+                    else if (sifra == pass && kupac_id!="1")
                     {
                         MessageBox.Show("Uspješno ste logovani " + imePrez);
-                        PostaviStatusLogin();
                         Form5 fr5 = new Form5();
                         this.Hide();
                         fr5.Show();
@@ -86,49 +79,6 @@ namespace Projektni_zadatak
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void PostaviStatusLogin()
-        {
-            String upit = "UPDATE Kupac SET login_status=1 " +
-                    " WHERE kupac_id='" + kupacID + "' ";
-            try
-            {
-                MySqlConnection konekcija = new MySqlConnection(konekcioniString);
-                konekcija.Open();
-
-                MySqlCommand cmd = new MySqlCommand(upit, konekcija);
-
-                cmd.ExecuteNonQuery();
-
-                konekcija.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        public void PostaviStatusLogout()
-        {
-            String upit = "UPDATE Kupac SET login_status=0 " +
-                    " WHERE kupac_id='" + kupacID + "' ";
-
-            try
-            {
-                MySqlConnection konekcija = new MySqlConnection(konekcioniString);
-                konekcija.Open();
-
-                MySqlCommand cmd = new MySqlCommand(upit, konekcija);
-
-                cmd.ExecuteNonQuery();
-                konekcija.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
