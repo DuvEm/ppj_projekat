@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80028
 File Encoding         : 65001
 
-Date: 2022-04-16 13:17:47
+Date: 2022-04-16 13:54:23
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -44,13 +44,16 @@ CREATE TABLE `kupac` (
   `user` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `pass` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`kupac_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of kupac
 -- ----------------------------
 INSERT INTO `kupac` VALUES ('1', 'Emir', 'Duvnjak', 'Sarajevo', 'Sarajevo', '054545', 'admin', 'admin');
 INSERT INTO `kupac` VALUES ('2', 'Huso', 'Husic', 'Tuzla', 'Tuzla', '055448', 'Huso', 'huso123');
+INSERT INTO `kupac` VALUES ('3', 'Edhem', 'Rogo', 'Sarajevo', 'Buća Potok', '062356897', 'Edo', 'edo123');
+INSERT INTO `kupac` VALUES ('4', 'Salih', 'Rogo', 'Sarajevo', 'Buća Potok', '062569874', 'Sale', 'sale123');
+INSERT INTO `kupac` VALUES ('5', 'Nedim', 'Ligata', 'Sarajevo', 'Briješće', '062365478', 'Liga', 'liga123');
 
 -- ----------------------------
 -- Table structure for `narudzbenica`

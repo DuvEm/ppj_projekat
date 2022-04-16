@@ -151,5 +151,16 @@ namespace Projektni_zadatak
         {
             AzuriranjeKupca();
         }
+
+        private void buttonResetPolja_Click(object sender, EventArgs e)
+        {
+            textBoxIme2.Text = "";
+            textBoxPrezime2.Text = "";
+            textBoxGrad.Text = "";
+            textBoxAdresa.Text = "";
+            textBoxTelefon.Text = "";
+            textBoxKorIme.Text = "";
+            textBoxSifra.Text = ""; 
+        }
     }
 }

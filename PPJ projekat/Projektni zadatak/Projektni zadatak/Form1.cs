@@ -18,7 +18,7 @@ namespace Projektni_zadatak
         }
 
         public static String kupacID;
-        public static String konekcioniString = "Server=localhost; Port=3306; Database=ppj_projekatt; " +
+        public static String konekcioniString = "Server=localhost; Port=3306; Database=ppj_projekat; " +
                     "Uid=root; Pwd=emir1.";
 
         private void buttonPrijava_Click(object sender, EventArgs e)
