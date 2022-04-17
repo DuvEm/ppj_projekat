@@ -32,21 +32,21 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxKolicina = new System.Windows.Forms.TextBox();
+            this.textBoxSifra = new System.Windows.Forms.TextBox();
+            this.textBoxNazivArtikla = new System.Windows.Forms.TextBox();
+            this.buttonTrazi = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxVrstaArtikla = new System.Windows.Forms.TextBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBoxNazivArtikla2 = new System.Windows.Forms.TextBox();
+            this.textBoxCijena = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonAzuriranjeArtikla = new System.Windows.Forms.Button();
+            this.buttonDodavanjeArtikla = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.meniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kreiranjeažuriranjeNovogKupcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,21 +64,21 @@
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.textBoxKolicina);
+            this.groupBox1.Controls.Add(this.textBoxSifra);
+            this.groupBox1.Controls.Add(this.textBoxNazivArtikla);
+            this.groupBox1.Controls.Add(this.buttonTrazi);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.textBoxVrstaArtikla);
+            this.groupBox1.Controls.Add(this.textBoxID);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox10);
+            this.groupBox1.Controls.Add(this.textBoxNazivArtikla2);
+            this.groupBox1.Controls.Add(this.textBoxCijena);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.buttonAzuriranjeArtikla);
+            this.groupBox1.Controls.Add(this.buttonDodavanjeArtikla);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 30);
             this.groupBox1.Name = "groupBox1";
@@ -111,35 +111,38 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Dodaj količinu:";
             // 
-            // textBox7
+            // textBoxKolicina
             // 
-            this.textBox7.Location = new System.Drawing.Point(96, 316);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 6;
+            this.textBoxKolicina.Location = new System.Drawing.Point(96, 316);
+            this.textBoxKolicina.Name = "textBoxKolicina";
+            this.textBoxKolicina.Size = new System.Drawing.Size(100, 20);
+            this.textBoxKolicina.TabIndex = 6;
             // 
-            // textBox8
+            // textBoxSifra
             // 
-            this.textBox8.Location = new System.Drawing.Point(6, 19);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(59, 20);
-            this.textBox8.TabIndex = 7;
+            this.textBoxSifra.Location = new System.Drawing.Point(6, 19);
+            this.textBoxSifra.Name = "textBoxSifra";
+            this.textBoxSifra.Size = new System.Drawing.Size(59, 20);
+            this.textBoxSifra.TabIndex = 7;
+            this.textBoxSifra.TextChanged += new System.EventHandler(this.textBoxSifra_TextChanged);
             // 
-            // textBox9
+            // textBoxNazivArtikla
             // 
-            this.textBox9.Location = new System.Drawing.Point(71, 19);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 8;
+            this.textBoxNazivArtikla.Location = new System.Drawing.Point(71, 19);
+            this.textBoxNazivArtikla.Name = "textBoxNazivArtikla";
+            this.textBoxNazivArtikla.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNazivArtikla.TabIndex = 8;
+            this.textBoxNazivArtikla.TextChanged += new System.EventHandler(this.textBoxNazivArtikla_TextChanged);
             // 
-            // button1
+            // buttonTrazi
             // 
-            this.button1.Location = new System.Drawing.Point(177, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Traži";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonTrazi.Location = new System.Drawing.Point(177, 19);
+            this.buttonTrazi.Name = "buttonTrazi";
+            this.buttonTrazi.Size = new System.Drawing.Size(75, 23);
+            this.buttonTrazi.TabIndex = 10;
+            this.buttonTrazi.Text = "Traži";
+            this.buttonTrazi.UseVisualStyleBackColor = true;
+            this.buttonTrazi.Click += new System.EventHandler(this.buttonTrazi_Click);
             // 
             // label4
             // 
@@ -168,19 +171,19 @@
             this.label3.TabIndex = 15;
             this.label3.Text = "Cijena:";
             // 
-            // textBox6
+            // textBoxVrstaArtikla
             // 
-            this.textBox6.Location = new System.Drawing.Point(96, 267);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 5;
+            this.textBoxVrstaArtikla.Location = new System.Drawing.Point(96, 267);
+            this.textBoxVrstaArtikla.Name = "textBoxVrstaArtikla";
+            this.textBoxVrstaArtikla.Size = new System.Drawing.Size(100, 20);
+            this.textBoxVrstaArtikla.TabIndex = 5;
             // 
-            // textBox5
+            // textBoxID
             // 
-            this.textBox5.Location = new System.Drawing.Point(416, 290);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(57, 20);
-            this.textBox5.TabIndex = 4;
+            this.textBoxID.Location = new System.Drawing.Point(416, 290);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(57, 20);
+            this.textBoxID.TabIndex = 4;
             // 
             // label1
             // 
@@ -192,19 +195,19 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Naziv artikla:";
             // 
-            // textBox3
+            // textBoxNazivArtikla2
             // 
-            this.textBox3.Location = new System.Drawing.Point(96, 243);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.textBoxNazivArtikla2.Location = new System.Drawing.Point(96, 243);
+            this.textBoxNazivArtikla2.Name = "textBoxNazivArtikla2";
+            this.textBoxNazivArtikla2.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNazivArtikla2.TabIndex = 2;
             // 
-            // textBox10
+            // textBoxCijena
             // 
-            this.textBox10.Location = new System.Drawing.Point(96, 293);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 9;
+            this.textBoxCijena.Location = new System.Drawing.Point(96, 293);
+            this.textBoxCijena.Name = "textBoxCijena";
+            this.textBoxCijena.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCijena.TabIndex = 9;
             // 
             // label2
             // 
@@ -215,23 +218,25 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Vrsta artikla:";
             // 
-            // button3
+            // buttonAzuriranjeArtikla
             // 
-            this.button3.Location = new System.Drawing.Point(335, 346);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 35);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Ažurairanje podataka";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonAzuriranjeArtikla.Location = new System.Drawing.Point(335, 346);
+            this.buttonAzuriranjeArtikla.Name = "buttonAzuriranjeArtikla";
+            this.buttonAzuriranjeArtikla.Size = new System.Drawing.Size(138, 35);
+            this.buttonAzuriranjeArtikla.TabIndex = 12;
+            this.buttonAzuriranjeArtikla.Text = "Ažurairanje podataka";
+            this.buttonAzuriranjeArtikla.UseVisualStyleBackColor = true;
+            this.buttonAzuriranjeArtikla.Click += new System.EventHandler(this.buttonAzuriranjeArtikla_Click);
             // 
-            // button2
+            // buttonDodavanjeArtikla
             // 
-            this.button2.Location = new System.Drawing.Point(62, 349);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 35);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Dodavanje artikla";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonDodavanjeArtikla.Location = new System.Drawing.Point(62, 349);
+            this.buttonDodavanjeArtikla.Name = "buttonDodavanjeArtikla";
+            this.buttonDodavanjeArtikla.Size = new System.Drawing.Size(134, 35);
+            this.buttonDodavanjeArtikla.TabIndex = 11;
+            this.buttonDodavanjeArtikla.Text = "Dodavanje artikla";
+            this.buttonDodavanjeArtikla.UseVisualStyleBackColor = true;
+            this.buttonDodavanjeArtikla.Click += new System.EventHandler(this.buttonDodavanjeArtikla_Click);
             // 
             // menuStrip1
             // 
@@ -293,6 +298,7 @@
             this.Name = "Form3";
             this.Text = "Dodavanje / Ažuriranje artikala";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form3_FormClosed);
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -310,21 +316,21 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxKolicina;
+        private System.Windows.Forms.TextBox textBoxSifra;
+        private System.Windows.Forms.TextBox textBoxNazivArtikla;
+        private System.Windows.Forms.Button buttonTrazi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxVrstaArtikla;
+        private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBoxNazivArtikla2;
+        private System.Windows.Forms.TextBox textBoxCijena;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonAzuriranjeArtikla;
+        private System.Windows.Forms.Button buttonDodavanjeArtikla;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem meniToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kreiranjeažuriranjeNovogKupcaToolStripMenuItem;

@@ -74,15 +74,10 @@ namespace Projektni_zadatak
                     " telefon AS 'Telefon', user AS 'Korisnicko ime', pass as 'Sifra'" +
                     " FROM kupac ";
   
-                if (textBoxIme.Text != "")
+                if (textBoxIme.Text != "" || textBoxPrezime.Text != "")
                 {
-                    query += " where kupac.ime LIKE '" + textBoxIme.Text + "%' ";
+                    query += " where kupac.ime LIKE '" + textBoxIme.Text + "%' and kupac.prezime LIKE '" + textBoxPrezime.Text + "%' "; ;
                 }
-                if (textBoxPrezime.Text != "")
-                {
-                    query += " and kupac.prezime LIKE '" + textBoxPrezime.Text + "%' ";
-                }
-
                 query += " ORDER BY kupac_id ASC ";
 
                 MySqlConnection konekcija = new MySqlConnection(konekStr);
@@ -145,14 +140,27 @@ namespace Projektni_zadatak
         private void buttonKreiranjeKupca_Click(object sender, EventArgs e)
         {
             KreiranjeKupca();
+            resetovanjepolja();
+            PrikazKorisnika();
         }
 
         private void buttonAzuriranjeKupca_Click(object sender, EventArgs e)
         {
             AzuriranjeKupca();
+            resetovanjepolja();
+            PrikazKorisnika();
         }
 
-        private void buttonResetPolja_Click(object sender, EventArgs e)
+        private void textBoxIme_TextChanged(object sender, EventArgs e)
+        {
+            PrikazKorisnika();
+        }
+
+        private void textBoxPrezime_TextChanged(object sender, EventArgs e)
+        {
+            PrikazKorisnika();
+        }
+        void resetovanjepolja()
         {
             textBoxIme2.Text = "";
             textBoxPrezime2.Text = "";
@@ -160,7 +168,8 @@ namespace Projektni_zadatak
             textBoxAdresa.Text = "";
             textBoxTelefon.Text = "";
             textBoxKorIme.Text = "";
-            textBoxSifra.Text = ""; 
+            textBoxSifra.Text = "";
+            textBoxIDKupca.Text = "";
         }
     }
 }

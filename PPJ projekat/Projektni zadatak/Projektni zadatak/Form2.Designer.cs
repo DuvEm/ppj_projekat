@@ -57,7 +57,6 @@
             this.prikazbrisanjeNarudžbeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.odjavaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izlazIzAplikacijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonResetPolja = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -65,7 +64,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.buttonResetPolja);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.textBoxIDKupca);
             this.groupBox1.Controls.Add(this.label6);
@@ -142,6 +140,7 @@
             this.textBoxIme.Name = "textBoxIme";
             this.textBoxIme.Size = new System.Drawing.Size(100, 20);
             this.textBoxIme.TabIndex = 7;
+            this.textBoxIme.TextChanged += new System.EventHandler(this.textBoxIme_TextChanged);
             // 
             // textBoxPrezime
             // 
@@ -149,6 +148,7 @@
             this.textBoxPrezime.Name = "textBoxPrezime";
             this.textBoxPrezime.Size = new System.Drawing.Size(100, 20);
             this.textBoxPrezime.TabIndex = 8;
+            this.textBoxPrezime.TextChanged += new System.EventHandler(this.textBoxPrezime_TextChanged);
             // 
             // buttonTrazi
             // 
@@ -326,16 +326,6 @@
             this.izlazIzAplikacijeToolStripMenuItem.Text = "Izlaz iz aplikacije";
             this.izlazIzAplikacijeToolStripMenuItem.Click += new System.EventHandler(this.izlazIzAplikacijeToolStripMenuItem_Click);
             // 
-            // buttonResetPolja
-            // 
-            this.buttonResetPolja.Location = new System.Drawing.Point(15, 371);
-            this.buttonResetPolja.Name = "buttonResetPolja";
-            this.buttonResetPolja.Size = new System.Drawing.Size(100, 23);
-            this.buttonResetPolja.TabIndex = 23;
-            this.buttonResetPolja.Text = "Reset polja";
-            this.buttonResetPolja.UseVisualStyleBackColor = true;
-            this.buttonResetPolja.Click += new System.EventHandler(this.buttonResetPolja_Click);
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,7 +379,6 @@
         private System.Windows.Forms.ToolStripMenuItem prikazbrisanjeNarudžbeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem odjavaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem izlazIzAplikacijeToolStripMenuItem;
-        private System.Windows.Forms.Button buttonResetPolja;
 
     }
 }

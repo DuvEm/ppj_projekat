@@ -4,13 +4,13 @@ Navicat MySQL Data Transfer
 Source Server         : mysql
 Source Server Version : 80028
 Source Host           : localhost:3306
-Source Database       : ppj_projekatt
+Source Database       : ppj_projekat
 
 Target Server Type    : MYSQL
 Target Server Version : 80028
 File Encoding         : 65001
 
-Date: 2022-04-16 13:54:23
+Date: 2022-04-17 13:17:05
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -24,11 +24,15 @@ CREATE TABLE `artikal` (
   `vrsta_artikla` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `cijena` double NOT NULL,
   PRIMARY KEY (`artikal_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of artikal
 -- ----------------------------
+INSERT INTO `artikal` VALUES ('1', 'Fudbalska lopta', 'Lopta', '150');
+INSERT INTO `artikal` VALUES ('2', 'Kosarkaska lopta', 'Lopta', '120');
+INSERT INTO `artikal` VALUES ('3', 'Teniska lopta', 'Lopta', '15');
+INSERT INTO `artikal` VALUES ('4', 'Odbojkaska lopta', 'Lopta', '45');
 
 -- ----------------------------
 -- Table structure for `kupac`
@@ -83,11 +87,15 @@ CREATE TABLE `skladiste` (
   PRIMARY KEY (`id`),
   KEY `artikal1_id` (`artikal_id`),
   CONSTRAINT `artikal1_id` FOREIGN KEY (`artikal_id`) REFERENCES `artikal` (`artikal_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of skladiste
 -- ----------------------------
+INSERT INTO `skladiste` VALUES ('1', '1', '7');
+INSERT INTO `skladiste` VALUES ('2', '2', '5');
+INSERT INTO `skladiste` VALUES ('3', '3', '40');
+INSERT INTO `skladiste` VALUES ('4', '4', '14');
 
 -- ----------------------------
 -- Table structure for `stavka_narudzbenice`

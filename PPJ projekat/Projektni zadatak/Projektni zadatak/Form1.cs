@@ -17,7 +17,7 @@ namespace Projektni_zadatak
             InitializeComponent();
         }
 
-        public static String kupacID;
+        //public static String kupacID;
         public static String konekcioniString = "Server=localhost; Port=3306; Database=ppj_projekat; " +
                     "Uid=root; Pwd=emir1.";
 
