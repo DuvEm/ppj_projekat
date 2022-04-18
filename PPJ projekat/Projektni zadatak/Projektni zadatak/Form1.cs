@@ -17,7 +17,7 @@ namespace Projektni_zadatak
             InitializeComponent();
         }
 
-        //public static String kupacID;
+        public static String kupacID;
         public static String konekcioniString = "Server=localhost; Port=3306; Database=ppj_projekat; " +
                     "Uid=root; Pwd=emir1.";
 
@@ -51,15 +51,15 @@ namespace Projektni_zadatak
                 {
                     String pass = reader[0].ToString();
                     String imePrez = reader[1].ToString();
-                    String kupac_id = reader[2].ToString();
-                    if (sifra == pass && kupac_id=="1")
+                    kupacID = reader[2].ToString();
+                    if (sifra == pass && kupacID=="1")
                     {
                         MessageBox.Show("Uspješno ste logovani " + imePrez);
                         Form2 fr2 = new Form2();
                         this.Hide();
                         fr2.Show();
                     }
-                    else if (sifra == pass && kupac_id!="1")
+                    else if (sifra == pass && kupacID!="1")
                     {
                         MessageBox.Show("Uspješno ste logovani " + imePrez);
                         Form5 fr5 = new Form5();

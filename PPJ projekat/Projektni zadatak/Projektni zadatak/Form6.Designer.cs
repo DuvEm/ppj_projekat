@@ -33,11 +33,11 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonPrikazStavki = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.textBoxTotal = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.meniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,11 +56,11 @@
             this.groupBox1.Controls.Add(this.dataGridView2);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.buttonPrikazStavki);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox10);
+            this.groupBox1.Controls.Add(this.textBoxID);
+            this.groupBox1.Controls.Add(this.textBoxTotal);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 26);
@@ -106,14 +106,15 @@
             this.label5.TabIndex = 24;
             this.label5.Text = "Narudžbe";
             // 
-            // button1
+            // buttonPrikazStavki
             // 
-            this.button1.Location = new System.Drawing.Point(519, 264);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 39);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Prikaz stavki";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonPrikazStavki.Location = new System.Drawing.Point(519, 264);
+            this.buttonPrikazStavki.Name = "buttonPrikazStavki";
+            this.buttonPrikazStavki.Size = new System.Drawing.Size(75, 39);
+            this.buttonPrikazStavki.TabIndex = 23;
+            this.buttonPrikazStavki.Text = "Prikaz stavki";
+            this.buttonPrikazStavki.UseVisualStyleBackColor = true;
+            this.buttonPrikazStavki.Click += new System.EventHandler(this.buttonPrikazStavki_Click);
             // 
             // dataGridView1
             // 
@@ -132,19 +133,19 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Total:";
             // 
-            // textBox3
+            // textBoxID
             // 
-            this.textBox3.Location = new System.Drawing.Point(443, 274);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(70, 20);
-            this.textBox3.TabIndex = 2;
+            this.textBoxID.Location = new System.Drawing.Point(443, 274);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(70, 20);
+            this.textBoxID.TabIndex = 2;
             // 
-            // textBox10
+            // textBoxTotal
             // 
-            this.textBox10.Location = new System.Drawing.Point(443, 311);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(70, 20);
-            this.textBox10.TabIndex = 9;
+            this.textBoxTotal.Location = new System.Drawing.Point(443, 311);
+            this.textBoxTotal.Name = "textBoxTotal";
+            this.textBoxTotal.Size = new System.Drawing.Size(70, 20);
+            this.textBoxTotal.TabIndex = 9;
             // 
             // label2
             // 
@@ -207,6 +208,7 @@
             this.Name = "Form6";
             this.Text = "Prikaz narudžbi i stavki";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form6_FormClosed);
+            this.Load += new System.EventHandler(this.Form6_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -225,11 +227,11 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonPrikazStavki;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.TextBox textBoxTotal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem meniToolStripMenuItem;

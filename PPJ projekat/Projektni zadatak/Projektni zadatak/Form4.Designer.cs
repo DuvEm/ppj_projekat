@@ -31,8 +31,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.buttonBrisanjeNarudzbe = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.meniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kreiranjeažuriranjeNovogKupcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,8 +48,8 @@
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.textBoxID);
+            this.groupBox1.Controls.Add(this.buttonBrisanjeNarudzbe);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 26);
             this.groupBox1.Name = "groupBox1";
@@ -75,21 +75,22 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "ID narudžbe:";
             // 
-            // textBox5
+            // textBoxID
             // 
-            this.textBox5.Location = new System.Drawing.Point(91, 229);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(77, 20);
-            this.textBox5.TabIndex = 4;
+            this.textBoxID.Location = new System.Drawing.Point(91, 229);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(77, 20);
+            this.textBoxID.TabIndex = 4;
             // 
-            // button3
+            // buttonBrisanjeNarudzbe
             // 
-            this.button3.Location = new System.Drawing.Point(174, 221);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(151, 35);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Brisanje narudžbe:";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonBrisanjeNarudzbe.Location = new System.Drawing.Point(174, 221);
+            this.buttonBrisanjeNarudzbe.Name = "buttonBrisanjeNarudzbe";
+            this.buttonBrisanjeNarudzbe.Size = new System.Drawing.Size(151, 35);
+            this.buttonBrisanjeNarudzbe.TabIndex = 12;
+            this.buttonBrisanjeNarudzbe.Text = "Brisanje narudžbe:";
+            this.buttonBrisanjeNarudzbe.UseVisualStyleBackColor = true;
+            this.buttonBrisanjeNarudzbe.Click += new System.EventHandler(this.buttonBrisanjeNarudzbe_Click_1);
             // 
             // menuStrip1
             // 
@@ -151,6 +152,7 @@
             this.Name = "Form4";
             this.Text = "Prikaz / Brisanje narudžbe";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form4_FormClosed);
+            this.Load += new System.EventHandler(this.Form4_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -166,8 +168,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.Button buttonBrisanjeNarudzbe;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem meniToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kreiranjeažuriranjeNovogKupcaToolStripMenuItem;

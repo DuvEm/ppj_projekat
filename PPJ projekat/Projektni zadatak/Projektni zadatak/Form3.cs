@@ -16,8 +16,8 @@ namespace Projektni_zadatak
         {
             InitializeComponent();
         }
-        String konekStr = Form1.konekcioniString;
-
+        String konekStr = Form1.konekcioniString; 
+   
         private void kreiranjeažuriranjeNovogKupcaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -90,36 +90,29 @@ namespace Projektni_zadatak
         }
         
         private void KreiranjeArtikla()
-        {
-            dohvatanjeArtikal_id();
-                try
-                {
-                    string query = "insert into artikal (naziv_artikla, vrsta_artikla, cijena) values" +
-                            "('" + textBoxNazivArtikla2.Text + "','" + textBoxVrstaArtikla.Text + "','" + textBoxCijena.Text + "');"+ 
-                            "insert into skladiste (artikal_id,kolicina_stanje) values" +
-                            "('" + textBoxID.Text + "','" + textBoxKolicina.Text + "');";
-                    MySqlConnection konekcija = new MySqlConnection(konekStr);
-                    konekcija.Open();
-                    MySqlCommand cmd = new MySqlCommand(query, konekcija);
-                    cmd.ExecuteNonQuery();
-                    konekcija.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-        private void dohvatanjeArtikal_id()
-        {
-            String query = "select max(artikal_id+1) from artikal";
+        { 
+            
+            String query = "INSERT INTO artikal (naziv_artikla,vrsta_artikla,cijena) VALUES " +
+            "('" + textBoxNazivArtikla2.Text + "','" + textBoxVrstaArtikla.Text + "','" + textBoxCijena.Text + "')";
             MySqlConnection konekcija = new MySqlConnection(konekStr);
             konekcija.Open();
             MySqlCommand cmd = new MySqlCommand(query, konekcija);
+            cmd.ExecuteNonQuery();
+            String query2 = "SELECT artikal_id from artikal where naziv_artikla='" + textBoxNazivArtikla2.Text + "'";
+            MySqlCommand cmd2 = new MySqlCommand(query2, konekcija);
             MySqlDataReader reader;
-            reader = cmd.ExecuteReader();
-            reader.Read();
-            textBoxID.Text = reader[0].ToString();  
-        }
+            reader = cmd2.ExecuteReader();
+            reader.Read(); 
+            string artikal_id = reader[0].ToString();
+            reader.Close();
+            String query1 = "INSERT INTO skladiste (kolicina_stanje,artikal_id) VALUES ('" + textBoxKolicina.Text + "',";
+            query1 += "' " + artikal_id + "')";
+            MySqlCommand cmd1 = new MySqlCommand(query1, konekcija);
+            
+            cmd1.ExecuteNonQuery();
+            konekcija.Close();
+            }
+            
         private void brisanjeTeksta()
         {
             textBoxID.Text = "";

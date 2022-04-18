@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80028
 File Encoding         : 65001
 
-Date: 2022-04-17 13:17:05
+Date: 2022-04-18 18:12:45
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -70,11 +70,14 @@ CREATE TABLE `narudzbenica` (
   PRIMARY KEY (`narudzbenica_id`),
   KEY `kupac_id` (`kupac_id`),
   CONSTRAINT `kupac_id` FOREIGN KEY (`kupac_id`) REFERENCES `kupac` (`kupac_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of narudzbenica
 -- ----------------------------
+INSERT INTO `narudzbenica` VALUES ('3', '3', '2022-04-18');
+INSERT INTO `narudzbenica` VALUES ('4', '3', '2022-04-18');
+INSERT INTO `narudzbenica` VALUES ('5', '4', '2022-04-18');
 
 -- ----------------------------
 -- Table structure for `skladiste`
@@ -92,10 +95,10 @@ CREATE TABLE `skladiste` (
 -- ----------------------------
 -- Records of skladiste
 -- ----------------------------
-INSERT INTO `skladiste` VALUES ('1', '1', '7');
+INSERT INTO `skladiste` VALUES ('1', '1', '4');
 INSERT INTO `skladiste` VALUES ('2', '2', '5');
 INSERT INTO `skladiste` VALUES ('3', '3', '40');
-INSERT INTO `skladiste` VALUES ('4', '4', '14');
+INSERT INTO `skladiste` VALUES ('4', '4', '10');
 
 -- ----------------------------
 -- Table structure for `stavka_narudzbenice`
@@ -111,8 +114,11 @@ CREATE TABLE `stavka_narudzbenice` (
   KEY `artikal_id` (`artikal_id`),
   CONSTRAINT `artikal_id` FOREIGN KEY (`artikal_id`) REFERENCES `artikal` (`artikal_id`),
   CONSTRAINT `narudzbenica_id` FOREIGN KEY (`narudzbenica_id`) REFERENCES `narudzbenica` (`narudzbenica_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of stavka_narudzbenice
 -- ----------------------------
+INSERT INTO `stavka_narudzbenice` VALUES ('3', '3', '1', '2');
+INSERT INTO `stavka_narudzbenice` VALUES ('4', '4', '4', '4');
+INSERT INTO `stavka_narudzbenice` VALUES ('5', '5', '1', '1');

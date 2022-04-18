@@ -32,17 +32,17 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonKreirajNarudzbu = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxKol = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.textBoxUkupno = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonObrisi = new System.Windows.Forms.Button();
+            this.buttonDodaj = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.meniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prikazNarudžbiIStavkiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,17 +59,17 @@
             this.groupBox1.Controls.Add(this.dataGridView2);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.buttonKreirajNarudzbu);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.textBoxKol);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox10);
+            this.groupBox1.Controls.Add(this.textBoxID);
+            this.groupBox1.Controls.Add(this.textBoxUkupno);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.buttonObrisi);
+            this.groupBox1.Controls.Add(this.buttonDodaj);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 27);
             this.groupBox1.Name = "groupBox1";
@@ -104,14 +104,15 @@
             this.label5.TabIndex = 24;
             this.label5.Text = "Pregled artikala";
             // 
-            // button1
+            // buttonKreirajNarudzbu
             // 
-            this.button1.Location = new System.Drawing.Point(336, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 42);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Kreiraj narudžbu";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonKreirajNarudzbu.Location = new System.Drawing.Point(336, 19);
+            this.buttonKreirajNarudzbu.Name = "buttonKreirajNarudzbu";
+            this.buttonKreirajNarudzbu.Size = new System.Drawing.Size(144, 42);
+            this.buttonKreirajNarudzbu.TabIndex = 23;
+            this.buttonKreirajNarudzbu.Text = "Kreiraj narudžbu";
+            this.buttonKreirajNarudzbu.UseVisualStyleBackColor = true;
+            this.buttonKreirajNarudzbu.Click += new System.EventHandler(this.buttonKreirajNarudzbu_Click_1);
             // 
             // dataGridView1
             // 
@@ -139,12 +140,12 @@
             this.label3.TabIndex = 15;
             this.label3.Text = "KM";
             // 
-            // textBox6
+            // textBoxKol
             // 
-            this.textBox6.Location = new System.Drawing.Point(477, 392);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(60, 20);
-            this.textBox6.TabIndex = 5;
+            this.textBoxKol.Location = new System.Drawing.Point(477, 392);
+            this.textBoxKol.Name = "textBoxKol";
+            this.textBoxKol.Size = new System.Drawing.Size(60, 20);
+            this.textBoxKol.TabIndex = 5;
             // 
             // label1
             // 
@@ -155,19 +156,19 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "ID";
             // 
-            // textBox3
+            // textBoxID
             // 
-            this.textBox3.Location = new System.Drawing.Point(417, 392);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(54, 20);
-            this.textBox3.TabIndex = 2;
+            this.textBoxID.Location = new System.Drawing.Point(417, 392);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(54, 20);
+            this.textBoxID.TabIndex = 2;
             // 
-            // textBox10
+            // textBoxUkupno
             // 
-            this.textBox10.Location = new System.Drawing.Point(489, 432);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(99, 20);
-            this.textBox10.TabIndex = 9;
+            this.textBoxUkupno.Location = new System.Drawing.Point(489, 432);
+            this.textBoxUkupno.Name = "textBoxUkupno";
+            this.textBoxUkupno.Size = new System.Drawing.Size(99, 20);
+            this.textBoxUkupno.TabIndex = 9;
             // 
             // label2
             // 
@@ -178,23 +179,25 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "KOL";
             // 
-            // button3
+            // buttonObrisi
             // 
-            this.button3.Location = new System.Drawing.Point(336, 406);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Obriši";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonObrisi.Location = new System.Drawing.Point(336, 406);
+            this.buttonObrisi.Name = "buttonObrisi";
+            this.buttonObrisi.Size = new System.Drawing.Size(75, 23);
+            this.buttonObrisi.TabIndex = 12;
+            this.buttonObrisi.Text = "Obriši";
+            this.buttonObrisi.UseVisualStyleBackColor = true;
+            this.buttonObrisi.Click += new System.EventHandler(this.buttonObrisi_Click);
             // 
-            // button2
+            // buttonDodaj
             // 
-            this.button2.Location = new System.Drawing.Point(336, 377);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Dodaj";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonDodaj.Location = new System.Drawing.Point(336, 377);
+            this.buttonDodaj.Name = "buttonDodaj";
+            this.buttonDodaj.Size = new System.Drawing.Size(75, 23);
+            this.buttonDodaj.TabIndex = 11;
+            this.buttonDodaj.Text = "Dodaj";
+            this.buttonDodaj.UseVisualStyleBackColor = true;
+            this.buttonDodaj.Click += new System.EventHandler(this.buttonDodaj_Click);
             // 
             // menuStrip1
             // 
@@ -248,6 +251,7 @@
             this.Name = "Form5";
             this.Text = "Kreiranje narudžbe";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form5_FormClosed);
+            this.Load += new System.EventHandler(this.Form5_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -265,17 +269,17 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonKreirajNarudzbu;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxKol;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.TextBox textBoxUkupno;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonObrisi;
+        private System.Windows.Forms.Button buttonDodaj;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem meniToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem prikazNarudžbiIStavkiToolStripMenuItem;
