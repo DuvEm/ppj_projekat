@@ -171,5 +171,36 @@ namespace Projektni_zadatak
             textBoxSifra.Text = "";
             textBoxIDKupca.Text = "";
         }
+
+        private void textBoxIDKupca_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                String query = "SELECT ime,prezime,grad,adresa,telefon,user,pass FROM kupac WHERE kupac_id='" + textBoxIDKupca.Text + "'";
+                MySqlConnection konekcija = new MySqlConnection(konekStr);
+                konekcija.Open();
+                MySqlCommand cmd = new MySqlCommand(query, konekcija);
+                MySqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                reader.Read();
+                if (reader.HasRows)
+                {
+                    textBoxIme2.Text = reader[0].ToString();
+                    textBoxPrezime2.Text = reader[1].ToString();
+                    textBoxGrad.Text = reader[2].ToString();
+                    textBoxAdresa.Text = reader[3].ToString();
+                    textBoxTelefon.Text = reader[4].ToString();
+                    textBoxKorIme.Text = reader[5].ToString();
+                    textBoxSifra.Text = reader[6].ToString();
+                }
+                reader.Close();
+                konekcija.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

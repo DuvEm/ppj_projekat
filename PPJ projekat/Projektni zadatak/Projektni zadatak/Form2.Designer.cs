@@ -108,6 +108,7 @@
             this.textBoxIDKupca.Name = "textBoxIDKupca";
             this.textBoxIDKupca.Size = new System.Drawing.Size(100, 20);
             this.textBoxIDKupca.TabIndex = 0;
+            this.textBoxIDKupca.TextChanged += new System.EventHandler(this.textBoxIDKupca_TextChanged);
             // 
             // label6
             // 

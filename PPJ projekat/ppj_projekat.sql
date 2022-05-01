@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80028
 File Encoding         : 65001
 
-Date: 2022-04-18 18:12:45
+Date: 2022-05-01 12:59:04
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -57,7 +57,7 @@ INSERT INTO `kupac` VALUES ('1', 'Emir', 'Duvnjak', 'Sarajevo', 'Sarajevo', '054
 INSERT INTO `kupac` VALUES ('2', 'Huso', 'Husic', 'Tuzla', 'Tuzla', '055448', 'Huso', 'huso123');
 INSERT INTO `kupac` VALUES ('3', 'Edhem', 'Rogo', 'Sarajevo', 'Buća Potok', '062356897', 'Edo', 'edo123');
 INSERT INTO `kupac` VALUES ('4', 'Salih', 'Rogo', 'Sarajevo', 'Buća Potok', '062569874', 'Sale', 'sale123');
-INSERT INTO `kupac` VALUES ('5', 'Nedim', 'Ligata', 'Sarajevo', 'Briješće', '062365478', 'Liga', 'liga123');
+INSERT INTO `kupac` VALUES ('5', 'Nedim', 'Ligata', 'Sarajevo', 'Briješće', '06236547', 'Liga', 'liga123');
 
 -- ----------------------------
 -- Table structure for `narudzbenica`
@@ -70,7 +70,7 @@ CREATE TABLE `narudzbenica` (
   PRIMARY KEY (`narudzbenica_id`),
   KEY `kupac_id` (`kupac_id`),
   CONSTRAINT `kupac_id` FOREIGN KEY (`kupac_id`) REFERENCES `kupac` (`kupac_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of narudzbenica
@@ -78,6 +78,19 @@ CREATE TABLE `narudzbenica` (
 INSERT INTO `narudzbenica` VALUES ('3', '3', '2022-04-18');
 INSERT INTO `narudzbenica` VALUES ('4', '3', '2022-04-18');
 INSERT INTO `narudzbenica` VALUES ('5', '4', '2022-04-18');
+INSERT INTO `narudzbenica` VALUES ('6', '4', '2022-05-01');
+INSERT INTO `narudzbenica` VALUES ('7', '4', '2022-05-01');
+INSERT INTO `narudzbenica` VALUES ('8', '4', '2022-05-01');
+INSERT INTO `narudzbenica` VALUES ('9', '4', '2022-05-01');
+INSERT INTO `narudzbenica` VALUES ('10', '5', '2022-05-01');
+INSERT INTO `narudzbenica` VALUES ('11', '3', '2022-05-01');
+INSERT INTO `narudzbenica` VALUES ('12', '3', '2022-05-01');
+INSERT INTO `narudzbenica` VALUES ('13', '3', '2022-05-01');
+INSERT INTO `narudzbenica` VALUES ('14', '3', '2022-05-01');
+INSERT INTO `narudzbenica` VALUES ('16', '3', '2022-05-01');
+INSERT INTO `narudzbenica` VALUES ('17', '3', '2022-05-01');
+INSERT INTO `narudzbenica` VALUES ('18', '3', '2022-05-01');
+INSERT INTO `narudzbenica` VALUES ('19', '3', '2022-05-01');
 
 -- ----------------------------
 -- Table structure for `skladiste`
@@ -96,7 +109,7 @@ CREATE TABLE `skladiste` (
 -- Records of skladiste
 -- ----------------------------
 INSERT INTO `skladiste` VALUES ('1', '1', '4');
-INSERT INTO `skladiste` VALUES ('2', '2', '5');
+INSERT INTO `skladiste` VALUES ('2', '2', '9');
 INSERT INTO `skladiste` VALUES ('3', '3', '40');
 INSERT INTO `skladiste` VALUES ('4', '4', '10');
 
@@ -109,16 +122,25 @@ CREATE TABLE `stavka_narudzbenice` (
   `narudzbenica_id` int NOT NULL,
   `artikal_id` int NOT NULL,
   `kolicina` int DEFAULT NULL,
+  `ukupno_novca` int DEFAULT NULL,
   PRIMARY KEY (`stavka_id`),
   KEY `narudzbenica_id` (`narudzbenica_id`),
   KEY `artikal_id` (`artikal_id`),
   CONSTRAINT `artikal_id` FOREIGN KEY (`artikal_id`) REFERENCES `artikal` (`artikal_id`),
   CONSTRAINT `narudzbenica_id` FOREIGN KEY (`narudzbenica_id`) REFERENCES `narudzbenica` (`narudzbenica_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of stavka_narudzbenice
 -- ----------------------------
-INSERT INTO `stavka_narudzbenice` VALUES ('3', '3', '1', '2');
-INSERT INTO `stavka_narudzbenice` VALUES ('4', '4', '4', '4');
-INSERT INTO `stavka_narudzbenice` VALUES ('5', '5', '1', '1');
+INSERT INTO `stavka_narudzbenice` VALUES ('3', '3', '1', '2', '300');
+INSERT INTO `stavka_narudzbenice` VALUES ('4', '4', '4', '4', '180');
+INSERT INTO `stavka_narudzbenice` VALUES ('5', '5', '1', '1', '150');
+INSERT INTO `stavka_narudzbenice` VALUES ('6', '6', '1', '1', '150');
+INSERT INTO `stavka_narudzbenice` VALUES ('11', '8', '1', '1', '150');
+INSERT INTO `stavka_narudzbenice` VALUES ('12', '8', '2', '2', '240');
+INSERT INTO `stavka_narudzbenice` VALUES ('13', '9', '1', '1', '150');
+INSERT INTO `stavka_narudzbenice` VALUES ('14', '10', '1', '1', '150');
+INSERT INTO `stavka_narudzbenice` VALUES ('15', '11', '2', '1', '120');
+INSERT INTO `stavka_narudzbenice` VALUES ('25', '17', '1', '1', '150');
+INSERT INTO `stavka_narudzbenice` VALUES ('26', '17', '2', '1', '120');

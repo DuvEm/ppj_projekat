@@ -51,8 +51,8 @@ namespace Projektni_zadatak
         }
         private void PrikazNarudzbi()
         {
-            String query = "SELECT *" +
-                            " FROM narudzbenica where kupac_id='" + kupacID + "';";
+            String query = "SELECT narudzbenica.*, stavka_narudzbenice.stavka_id" +
+                            " FROM narudzbenica, stavka_narudzbenice where narudzbenica.narudzbenica_id=stavka_narudzbenice.narudzbenica_id and kupac_id='" + kupacID + "';";
             MySqlConnection konekcija = new MySqlConnection(konekStr);
             konekcija.Open(); 
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter(query, konekcija);
@@ -69,34 +69,40 @@ namespace Projektni_zadatak
         }
         private void prikazGrid2()
         {
-            MySqlConnection konekcija = new MySqlConnection(konekStr);
-            konekcija.Open(); 
-            String query4 = "SELECT stavka_narudzbenice.stavka_id as 'ID narudzbenice', stavka_narudzbenice.kolicina as 'Kolicina',stavka_narudzbenice.narudzbenica_id as 'ID narudzbe', artikal.naziv_artikla AS 'Naziv artikla'" +
-                            " FROM artikal, stavka_narudzbenice where artikal.artikal_id=stavka_narudzbenice.artikal_id and stavka_narudzbenice.narudzbenica_id='" + textBoxID.Text + "';";
-            MySqlDataAdapter dataAdapter1 = new MySqlDataAdapter(query4, konekcija);
-            DataTable tabela1 = new DataTable();
-            dataAdapter1.Fill(tabela1);
-            dataGridView2.DataSource = tabela1;
-            dataAdapter1.Dispose();
+            try
+            {
+                MySqlConnection konekcija = new MySqlConnection(konekStr);
+                konekcija.Open();
+                String query4 = "SELECT stavka_narudzbenice.stavka_id as 'ID narudzbenice', stavka_narudzbenice.kolicina as 'Kolicina',stavka_narudzbenice.narudzbenica_id as 'ID narudzbe', artikal.naziv_artikla AS 'Naziv artikla'" +
+                                " FROM artikal, stavka_narudzbenice where artikal.artikal_id=stavka_narudzbenice.artikal_id and stavka_narudzbenice.narudzbenica_id='" + textBoxID.Text + "';";
+                MySqlDataAdapter dataAdapter1 = new MySqlDataAdapter(query4, konekcija);
+                DataTable tabela1 = new DataTable();
+                dataAdapter1.Fill(tabela1);
+                dataGridView2.DataSource = tabela1;
+                dataAdapter1.Dispose();
 
-            String query2 = "SELECT artikal_id,kolicina from stavka_narudzbenice where narudzbenica_id='" + textBoxID.Text + "'";
-            MySqlCommand cmd2 = new MySqlCommand(query2, konekcija);
-            MySqlDataReader reader;
-            reader = cmd2.ExecuteReader();
-            reader.Read();
-            string artikal_id = reader[0].ToString();
-            int kolicina = Convert.ToInt32(reader[1]);
-            reader.Close();
+                String query2 = "SELECT artikal_id,kolicina from stavka_narudzbenice where narudzbenica_id='" + textBoxID.Text + "'";
+                MySqlCommand cmd2 = new MySqlCommand(query2, konekcija);
+                MySqlDataReader reader;
+                reader = cmd2.ExecuteReader();
+                reader.Read();
+                string artikal_id = reader[0].ToString();
+                int kolicina = Convert.ToInt32(reader[1]);
+                reader.Close();
 
-            String query5 = "select cijena from artikal where artikal_id='" + artikal_id + "';";
-            MySqlCommand cmd5 = new MySqlCommand(query5, konekcija);
-            MySqlDataReader reader2;
-            reader2 = cmd5.ExecuteReader();
-            reader2.Read();
-            int cijena = Convert.ToInt32(reader2[0]);
-            reader2.Close();
-            konekcija.Close();
-            textBoxTotal.Text = (kolicina * cijena).ToString();
+                String query5 = "select sum(ukupno_novca) from stavka_narudzbenice where narudzbenica_id='" + textBoxID.Text + "';";
+                MySqlCommand cmd5 = new MySqlCommand(query5, konekcija);
+                MySqlDataReader reader2;
+                reader2 = cmd5.ExecuteReader();
+                reader2.Read();
+                textBoxTotal.Text=reader2[0].ToString();
+                reader2.Close();
+                konekcija.Close();
+            }
+            catch(Exception greska)
+            {
+                MessageBox.Show(greska.Message);
+            }
         }
 
     }

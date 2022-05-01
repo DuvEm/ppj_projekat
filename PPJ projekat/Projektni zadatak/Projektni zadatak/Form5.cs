@@ -75,6 +75,9 @@ namespace Projektni_zadatak
         {
             DodavanjeNarudzba();
             PrikazArtikla();
+            textBoxID.Text = "";
+            textBoxKol.Text = "";
+            
         }
 
         private void DodavanjeNarudzba()
@@ -93,7 +96,7 @@ namespace Projektni_zadatak
                 reader3.Close();
                 int kolicina = Convert.ToInt32(textBoxKol.Text); 
                 //provjera da li je moguce realizovati narudzbu
-                if (stanje > kolicina)
+                if (stanje >= kolicina)
                 {
                     //skida sa skladista broj narucenih artikala
                     string query = " Update skladiste set kolicina_stanje=kolicina_stanje-" +textBoxKol.Text +
@@ -137,10 +140,65 @@ namespace Projektni_zadatak
                     int cijena = Convert.ToInt32(reader2[0]);
                     reader2.Close();
                     int ukupno = cijena * kolicina;
-                    textBoxUkupno.Text = ukupno.ToString();
+                    //textBoxUkupno.Text = ukupno.ToString();
+
+                    string query8 = "select max(stavka_id) from stavka_narudzbenice where narudzbenica_id=" + narudzbenica_id + ";";
+                    MySqlCommand cmd8 = new MySqlCommand(query8, konekcija);
+                    MySqlDataReader reader8;
+                    reader8 = cmd8.ExecuteReader();
+                    reader8.Read();
+                    string max_stavka_id = reader8[0].ToString();
+                    reader8.Close();
+
+                    string query6 = " Update stavka_narudzbenice set ukupno_novca=" + ukupno +
+                    " where stavka_id='" + max_stavka_id + "' ";
+                    MySqlCommand cmd6 = new MySqlCommand(query6, konekcija);
+                    cmd6.ExecuteNonQuery();
+
+                    String query9 = "select sum(ukupno_novca) from stavka_narudzbenice where narudzbenica_id='" + narudzbenica_id + "';";
+                    MySqlCommand cmd9 = new MySqlCommand(query9, konekcija);
+                    MySqlDataReader reader9;
+                    reader9 = cmd9.ExecuteReader();
+                    reader9.Read();
+                    textBoxUkupno.Text = reader9[0].ToString();
+                    reader9.Close();
+
                 }
-                else { MessageBox.Show("Nema dovoljno na stanju"); }
+                else {
+                    MessageBox.Show("Nema dovoljno na stanju");
+                    textBoxID.Text = "";
+                    textBoxKol.Text = "";
+                    prikazNovca();
+                }
                 konekcija.Close(); 
+            }
+            catch (Exception greska)
+            {
+                MessageBox.Show(greska.Message);
+            }
+        }
+
+        private void prikazNovca()
+        {
+            try
+            {
+                string query2 = "select max(narudzbenica_id) from narudzbenica where kupac_id=" + kupacID;
+                MySqlConnection konekcija = new MySqlConnection(konekStr);
+                konekcija.Open();
+                MySqlCommand cmd2 = new MySqlCommand(query2, konekcija);
+                MySqlDataReader reader;
+                reader = cmd2.ExecuteReader();
+                reader.Read();
+                string narudzbenica_id = reader[0].ToString();
+                reader.Close();
+                String query9 = "select sum(ukupno_novca) from stavka_narudzbenice where narudzbenica_id='" + narudzbenica_id + "';";
+                MySqlCommand cmd9 = new MySqlCommand(query9, konekcija);
+                MySqlDataReader reader9;
+                reader9 = cmd9.ExecuteReader();
+                reader9.Read();
+                textBoxUkupno.Text = reader9[0].ToString();
+                reader9.Close();
+                konekcija.Close();
             }
             catch (Exception greska)
             {
@@ -155,50 +213,115 @@ namespace Projektni_zadatak
             KreirajNarudzbenicu();
         }
 
+
+
+        private void prikazGrid2()
+        {
+            try
+            {
+                MySqlConnection konekcija = new MySqlConnection(konekStr);
+                konekcija.Open();
+
+                string query2 = "select max(narudzbenica_id) from narudzbenica where kupac_id=" + kupacID;
+                MySqlCommand cmd2 = new MySqlCommand(query2, konekcija);
+                MySqlDataReader reader;
+                reader = cmd2.ExecuteReader();
+                reader.Read();
+                string narudzbenica_id = reader[0].ToString();
+                reader.Close();
+
+                String query4 = "SELECT stavka_narudzbenice.stavka_id as 'ID narudzbenice', stavka_narudzbenice.kolicina as 'Kolicina',stavka_narudzbenice.narudzbenica_id as 'ID narudzbe', artikal.naziv_artikla AS 'Naziv artikla'" +
+                                " FROM artikal, stavka_narudzbenice where artikal.artikal_id=stavka_narudzbenice.artikal_id and stavka_narudzbenice.narudzbenica_id='" + narudzbenica_id + "';";
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(query4, konekcija);
+                DataTable tabela = new DataTable();
+                dataAdapter.Fill(tabela);
+                dataGridView2.DataSource = tabela;
+                dataAdapter.Dispose();
+                konekcija.Close();
+            }
+            catch (Exception greska)
+            {
+                MessageBox.Show(greska.Message);
+            }
+        }
+
+
+
         private void KreirajNarudzbenicu()
         {
-            string query = "insert into narudzbenica (kupac_id, datum_narudzbe) values" +
-                            "('" + kupacID + "'," + "now());";
-                           
-            MySqlConnection konekcija = new MySqlConnection(konekStr);
-            konekcija.Open();
-            MySqlCommand cmd = new MySqlCommand(query, konekcija);
-            cmd.ExecuteNonQuery();
-            konekcija.Close();
+            try
+            {
+                string query = "insert into narudzbenica (kupac_id, datum_narudzbe) values" +
+                                "('" + kupacID + "'," + "now());";
+
+                MySqlConnection konekcija = new MySqlConnection(konekStr);
+                konekcija.Open();
+                MySqlCommand cmd = new MySqlCommand(query, konekcija);
+                cmd.ExecuteNonQuery();
+                konekcija.Close();
+            }
+            catch (Exception greska)
+            {
+                MessageBox.Show(greska.Message);
+            }
         }
 
         private void buttonObrisi_Click(object sender, EventArgs e)
         {
             ObrisiNarudzbu();
+            PrikazArtikla();
+            prikazGrid2();
+            prikazNovca();
 
         }
         private void ObrisiNarudzbu()
         {
-            string query2 = "select max(narudzbenica_id) from narudzbenica where kupac_id=" + kupacID+";";
-            MySqlConnection konekcija = new MySqlConnection(konekStr);
-            konekcija.Open();
-            MySqlCommand cmd2 = new MySqlCommand(query2, konekcija);
-            MySqlDataReader reader;
-            reader = cmd2.ExecuteReader();
-            reader.Read();
-            string narudzbenica_id = reader[0].ToString();
-            reader.Close();
-            string query = "SET FOREIGN_KEY_CHECKS=0;Delete from narudzbenica" + " where narudzbenica_id='" + narudzbenica_id + "'; SET FOREIGN_KEY_CHECKS=0;";
-            MySqlCommand cmd = new MySqlCommand(query, konekcija);
-            cmd.ExecuteNonQuery();
-            string query3 = "Delete from stavka_narudzbenice" + " where narudzbenica_id='" + narudzbenica_id + "'";
-            MySqlCommand cmd3 = new MySqlCommand(query3, konekcija);
-            cmd3.ExecuteNonQuery();
-            string query4 = " Update skladiste set kolicina_stanje=kolicina_stanje+" + textBoxKol.Text +
-                    " where artikal_id='" + textBoxID.Text + "' ";
-            MySqlCommand cmd4 = new MySqlCommand(query4, konekcija);
-            cmd4.ExecuteNonQuery();
-            PrikazArtikla();
-            dataGridView2.DataSource = null;
-            konekcija.Close();
-            textBoxID.Text = "";
-            textBoxKol.Text = "";
-            textBoxUkupno.Text = "";
+            try
+            {
+                string query = "select max(narudzbenica_id) from narudzbenica where kupac_id=" + kupacID + ";";
+                MySqlConnection konekcija = new MySqlConnection(konekStr);
+                konekcija.Open();
+                MySqlCommand cmd = new MySqlCommand(query, konekcija);
+                MySqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                reader.Read();
+                string narudzbenica_id = reader[0].ToString();
+                reader.Close();
+
+                string query2 = "select max(stavka_id) from stavka_narudzbenice where narudzbenica_id=" + narudzbenica_id + ";";
+                MySqlCommand cmd2 = new MySqlCommand(query2, konekcija);
+                MySqlDataReader reader2;
+                reader2 = cmd2.ExecuteReader();
+                reader2.Read();
+                string max_stavka_id = reader2[0].ToString();
+                reader2.Close();
+
+                string query4 = "select artikal_id,kolicina from stavka_narudzbenice where stavka_id=" + max_stavka_id + ";";
+                MySqlCommand cmd4 = new MySqlCommand(query4, konekcija);
+                MySqlDataReader reader4;
+                reader4 = cmd4.ExecuteReader();
+                reader4.Read();
+                string artikal = reader4[0].ToString();
+                string kolicina = reader4[1].ToString();
+                reader4.Close();
+
+                string query3 = "Delete from stavka_narudzbenice" + " where stavka_id='" + max_stavka_id + "' and narudzbenica_id='" + narudzbenica_id + "'";
+                MySqlCommand cmd3 = new MySqlCommand(query3, konekcija);
+                cmd3.ExecuteNonQuery();
+
+                string query5 = " Update skladiste set kolicina_stanje=kolicina_stanje+" + Convert.ToInt32(kolicina) +
+                        " where artikal_id='" + artikal + "' ";
+                MySqlCommand cmd5 = new MySqlCommand(query5, konekcija);
+                cmd5.ExecuteNonQuery();
+                PrikazArtikla();
+                konekcija.Close();
+                textBoxID.Text = "";
+                textBoxKol.Text = "";
+            }
+            catch (Exception greska)
+            {
+                MessageBox.Show(greska.Message);
+            }
         }
     }
 }
