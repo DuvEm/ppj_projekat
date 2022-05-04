@@ -89,6 +89,7 @@
             // 
             // numericUpDown1
             // 
+            this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.numericUpDown1.Location = new System.Drawing.Point(416, 314);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(57, 20);
@@ -96,6 +97,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 45);
             this.dataGridView1.Name = "dataGridView1";
@@ -113,6 +115,7 @@
             // 
             // textBoxKolicina
             // 
+            this.textBoxKolicina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxKolicina.Location = new System.Drawing.Point(96, 316);
             this.textBoxKolicina.Name = "textBoxKolicina";
             this.textBoxKolicina.Size = new System.Drawing.Size(100, 20);
@@ -120,6 +123,7 @@
             // 
             // textBoxSifra
             // 
+            this.textBoxSifra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxSifra.Location = new System.Drawing.Point(6, 19);
             this.textBoxSifra.Name = "textBoxSifra";
             this.textBoxSifra.Size = new System.Drawing.Size(59, 20);
@@ -128,6 +132,7 @@
             // 
             // textBoxNazivArtikla
             // 
+            this.textBoxNazivArtikla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxNazivArtikla.Location = new System.Drawing.Point(71, 19);
             this.textBoxNazivArtikla.Name = "textBoxNazivArtikla";
             this.textBoxNazivArtikla.Size = new System.Drawing.Size(100, 20);
@@ -136,12 +141,14 @@
             // 
             // buttonTrazi
             // 
+            this.buttonTrazi.BackColor = System.Drawing.Color.DarkCyan;
+            this.buttonTrazi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonTrazi.Location = new System.Drawing.Point(177, 19);
             this.buttonTrazi.Name = "buttonTrazi";
             this.buttonTrazi.Size = new System.Drawing.Size(75, 23);
             this.buttonTrazi.TabIndex = 10;
             this.buttonTrazi.Text = "Traži";
-            this.buttonTrazi.UseVisualStyleBackColor = true;
+            this.buttonTrazi.UseVisualStyleBackColor = false;
             this.buttonTrazi.Click += new System.EventHandler(this.buttonTrazi_Click);
             // 
             // label4
@@ -173,6 +180,7 @@
             // 
             // textBoxVrstaArtikla
             // 
+            this.textBoxVrstaArtikla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxVrstaArtikla.Location = new System.Drawing.Point(96, 267);
             this.textBoxVrstaArtikla.Name = "textBoxVrstaArtikla";
             this.textBoxVrstaArtikla.Size = new System.Drawing.Size(100, 20);
@@ -180,6 +188,7 @@
             // 
             // textBoxID
             // 
+            this.textBoxID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxID.Location = new System.Drawing.Point(416, 290);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(57, 20);
@@ -197,6 +206,7 @@
             // 
             // textBoxNazivArtikla2
             // 
+            this.textBoxNazivArtikla2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxNazivArtikla2.Location = new System.Drawing.Point(96, 243);
             this.textBoxNazivArtikla2.Name = "textBoxNazivArtikla2";
             this.textBoxNazivArtikla2.Size = new System.Drawing.Size(100, 20);
@@ -204,6 +214,7 @@
             // 
             // textBoxCijena
             // 
+            this.textBoxCijena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxCijena.Location = new System.Drawing.Point(96, 293);
             this.textBoxCijena.Name = "textBoxCijena";
             this.textBoxCijena.Size = new System.Drawing.Size(100, 20);
@@ -220,22 +231,26 @@
             // 
             // buttonAzuriranjeArtikla
             // 
+            this.buttonAzuriranjeArtikla.BackColor = System.Drawing.Color.DarkCyan;
+            this.buttonAzuriranjeArtikla.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonAzuriranjeArtikla.Location = new System.Drawing.Point(335, 346);
             this.buttonAzuriranjeArtikla.Name = "buttonAzuriranjeArtikla";
             this.buttonAzuriranjeArtikla.Size = new System.Drawing.Size(138, 35);
             this.buttonAzuriranjeArtikla.TabIndex = 12;
             this.buttonAzuriranjeArtikla.Text = "Ažurairanje podataka";
-            this.buttonAzuriranjeArtikla.UseVisualStyleBackColor = true;
+            this.buttonAzuriranjeArtikla.UseVisualStyleBackColor = false;
             this.buttonAzuriranjeArtikla.Click += new System.EventHandler(this.buttonAzuriranjeArtikla_Click);
             // 
             // buttonDodavanjeArtikla
             // 
+            this.buttonDodavanjeArtikla.BackColor = System.Drawing.Color.DarkCyan;
+            this.buttonDodavanjeArtikla.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonDodavanjeArtikla.Location = new System.Drawing.Point(62, 349);
             this.buttonDodavanjeArtikla.Name = "buttonDodavanjeArtikla";
             this.buttonDodavanjeArtikla.Size = new System.Drawing.Size(134, 35);
             this.buttonDodavanjeArtikla.TabIndex = 11;
             this.buttonDodavanjeArtikla.Text = "Dodavanje artikla";
-            this.buttonDodavanjeArtikla.UseVisualStyleBackColor = true;
+            this.buttonDodavanjeArtikla.UseVisualStyleBackColor = false;
             this.buttonDodavanjeArtikla.Click += new System.EventHandler(this.buttonDodavanjeArtikla_Click);
             // 
             // menuStrip1
@@ -291,6 +306,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(519, 427);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);

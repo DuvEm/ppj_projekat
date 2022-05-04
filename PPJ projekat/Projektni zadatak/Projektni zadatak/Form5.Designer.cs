@@ -73,23 +73,24 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(642, 452);
+            this.groupBox1.Size = new System.Drawing.Size(777, 452);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kreiranje narudžbe";
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(336, 93);
+            this.dataGridView2.Location = new System.Drawing.Point(453, 95);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(285, 262);
+            this.dataGridView2.Size = new System.Drawing.Size(318, 262);
             this.dataGridView2.TabIndex = 26;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(333, 77);
+            this.label6.Location = new System.Drawing.Point(471, 79);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 13);
             this.label6.TabIndex = 25;
@@ -106,26 +107,29 @@
             // 
             // buttonKreirajNarudzbu
             // 
-            this.buttonKreirajNarudzbu.Location = new System.Drawing.Point(336, 19);
+            this.buttonKreirajNarudzbu.BackColor = System.Drawing.Color.DarkCyan;
+            this.buttonKreirajNarudzbu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonKreirajNarudzbu.Location = new System.Drawing.Point(512, 19);
             this.buttonKreirajNarudzbu.Name = "buttonKreirajNarudzbu";
             this.buttonKreirajNarudzbu.Size = new System.Drawing.Size(144, 42);
             this.buttonKreirajNarudzbu.TabIndex = 23;
             this.buttonKreirajNarudzbu.Text = "Kreiraj narudžbu";
-            this.buttonKreirajNarudzbu.UseVisualStyleBackColor = true;
+            this.buttonKreirajNarudzbu.UseVisualStyleBackColor = false;
             this.buttonKreirajNarudzbu.Click += new System.EventHandler(this.buttonKreirajNarudzbu_Click_1);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(9, 50);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(274, 379);
+            this.dataGridView1.Size = new System.Drawing.Size(415, 379);
             this.dataGridView1.TabIndex = 22;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(442, 435);
+            this.label4.Location = new System.Drawing.Point(541, 434);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 16;
@@ -134,7 +138,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(596, 435);
+            this.label3.Location = new System.Drawing.Point(695, 434);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(25, 13);
             this.label3.TabIndex = 15;
@@ -142,7 +146,8 @@
             // 
             // textBoxKol
             // 
-            this.textBoxKol.Location = new System.Drawing.Point(477, 392);
+            this.textBoxKol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textBoxKol.Location = new System.Drawing.Point(627, 388);
             this.textBoxKol.Name = "textBoxKol";
             this.textBoxKol.Size = new System.Drawing.Size(60, 20);
             this.textBoxKol.TabIndex = 5;
@@ -150,7 +155,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(433, 376);
+            this.label1.Location = new System.Drawing.Point(583, 372);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(20, 13);
             this.label1.TabIndex = 13;
@@ -158,14 +163,16 @@
             // 
             // textBoxID
             // 
-            this.textBoxID.Location = new System.Drawing.Point(417, 392);
+            this.textBoxID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textBoxID.Location = new System.Drawing.Point(567, 388);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(54, 20);
             this.textBoxID.TabIndex = 2;
             // 
             // textBoxUkupno
             // 
-            this.textBoxUkupno.Location = new System.Drawing.Point(489, 432);
+            this.textBoxUkupno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textBoxUkupno.Location = new System.Drawing.Point(588, 431);
             this.textBoxUkupno.Name = "textBoxUkupno";
             this.textBoxUkupno.Size = new System.Drawing.Size(99, 20);
             this.textBoxUkupno.TabIndex = 9;
@@ -173,7 +180,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(486, 376);
+            this.label2.Location = new System.Drawing.Point(636, 372);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 14;
@@ -181,22 +188,26 @@
             // 
             // buttonObrisi
             // 
-            this.buttonObrisi.Location = new System.Drawing.Point(336, 406);
+            this.buttonObrisi.BackColor = System.Drawing.Color.DarkCyan;
+            this.buttonObrisi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonObrisi.Location = new System.Drawing.Point(486, 402);
             this.buttonObrisi.Name = "buttonObrisi";
             this.buttonObrisi.Size = new System.Drawing.Size(75, 23);
             this.buttonObrisi.TabIndex = 12;
             this.buttonObrisi.Text = "Obriši";
-            this.buttonObrisi.UseVisualStyleBackColor = true;
+            this.buttonObrisi.UseVisualStyleBackColor = false;
             this.buttonObrisi.Click += new System.EventHandler(this.buttonObrisi_Click);
             // 
             // buttonDodaj
             // 
-            this.buttonDodaj.Location = new System.Drawing.Point(336, 377);
+            this.buttonDodaj.BackColor = System.Drawing.Color.DarkCyan;
+            this.buttonDodaj.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonDodaj.Location = new System.Drawing.Point(486, 373);
             this.buttonDodaj.Name = "buttonDodaj";
             this.buttonDodaj.Size = new System.Drawing.Size(75, 23);
             this.buttonDodaj.TabIndex = 11;
             this.buttonDodaj.Text = "Dodaj";
-            this.buttonDodaj.UseVisualStyleBackColor = true;
+            this.buttonDodaj.UseVisualStyleBackColor = false;
             this.buttonDodaj.Click += new System.EventHandler(this.buttonDodaj_Click);
             // 
             // menuStrip1
@@ -205,7 +216,7 @@
             this.meniToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(664, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(813, 24);
             this.menuStrip1.TabIndex = 27;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -244,7 +255,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 490);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(813, 490);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

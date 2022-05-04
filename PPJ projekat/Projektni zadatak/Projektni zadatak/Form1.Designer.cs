@@ -53,17 +53,20 @@
             // 
             // buttonPrijava
             // 
+            this.buttonPrijava.BackColor = System.Drawing.Color.DarkCyan;
             this.buttonPrijava.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrijava.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonPrijava.Location = new System.Drawing.Point(338, 145);
             this.buttonPrijava.Name = "buttonPrijava";
             this.buttonPrijava.Size = new System.Drawing.Size(100, 44);
             this.buttonPrijava.TabIndex = 16;
             this.buttonPrijava.Text = "PRIJAVA";
-            this.buttonPrijava.UseVisualStyleBackColor = true;
+            this.buttonPrijava.UseVisualStyleBackColor = false;
             this.buttonPrijava.Click += new System.EventHandler(this.buttonPrijava_Click);
             // 
             // textBoxSifra
             // 
+            this.textBoxSifra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxSifra.Location = new System.Drawing.Point(338, 101);
             this.textBoxSifra.Name = "textBoxSifra";
             this.textBoxSifra.Size = new System.Drawing.Size(100, 20);
@@ -72,6 +75,7 @@
             // 
             // textBoxKorisnickoIme
             // 
+            this.textBoxKorisnickoIme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxKorisnickoIme.Location = new System.Drawing.Point(338, 53);
             this.textBoxKorisnickoIme.Name = "textBoxKorisnickoIme";
             this.textBoxKorisnickoIme.Size = new System.Drawing.Size(100, 20);
@@ -90,6 +94,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(219, 54);
             this.label1.Name = "label1";
@@ -105,6 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(450, 218);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonPrijava);

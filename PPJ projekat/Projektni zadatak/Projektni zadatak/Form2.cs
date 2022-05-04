@@ -202,5 +202,10 @@ namespace Projektni_zadatak
             }
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

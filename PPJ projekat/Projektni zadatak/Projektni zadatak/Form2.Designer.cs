@@ -93,9 +93,11 @@
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kreiranje/ažuriranje novog kupca";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 45);
             this.dataGridView1.Name = "dataGridView1";
@@ -104,6 +106,7 @@
             // 
             // textBoxIDKupca
             // 
+            this.textBoxIDKupca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxIDKupca.Location = new System.Drawing.Point(218, 410);
             this.textBoxIDKupca.Name = "textBoxIDKupca";
             this.textBoxIDKupca.Size = new System.Drawing.Size(100, 20);
@@ -130,6 +133,7 @@
             // 
             // textBoxAdresa
             // 
+            this.textBoxAdresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxAdresa.Location = new System.Drawing.Point(73, 321);
             this.textBoxAdresa.Name = "textBoxAdresa";
             this.textBoxAdresa.Size = new System.Drawing.Size(100, 20);
@@ -137,6 +141,7 @@
             // 
             // textBoxIme
             // 
+            this.textBoxIme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxIme.Location = new System.Drawing.Point(6, 19);
             this.textBoxIme.Name = "textBoxIme";
             this.textBoxIme.Size = new System.Drawing.Size(100, 20);
@@ -145,6 +150,7 @@
             // 
             // textBoxPrezime
             // 
+            this.textBoxPrezime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxPrezime.Location = new System.Drawing.Point(112, 19);
             this.textBoxPrezime.Name = "textBoxPrezime";
             this.textBoxPrezime.Size = new System.Drawing.Size(100, 20);
@@ -153,12 +159,14 @@
             // 
             // buttonTrazi
             // 
+            this.buttonTrazi.BackColor = System.Drawing.Color.DarkCyan;
+            this.buttonTrazi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonTrazi.Location = new System.Drawing.Point(218, 19);
             this.buttonTrazi.Name = "buttonTrazi";
             this.buttonTrazi.Size = new System.Drawing.Size(75, 23);
             this.buttonTrazi.TabIndex = 10;
             this.buttonTrazi.Text = "Traži";
-            this.buttonTrazi.UseVisualStyleBackColor = true;
+            this.buttonTrazi.UseVisualStyleBackColor = false;
             this.buttonTrazi.Click += new System.EventHandler(this.buttonTrazi_Click);
             // 
             // label4
@@ -190,6 +198,7 @@
             // 
             // textBoxPrezime2
             // 
+            this.textBoxPrezime2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxPrezime2.Location = new System.Drawing.Point(73, 272);
             this.textBoxPrezime2.Name = "textBoxPrezime2";
             this.textBoxPrezime2.Size = new System.Drawing.Size(100, 20);
@@ -197,6 +206,7 @@
             // 
             // textBoxTelefon
             // 
+            this.textBoxTelefon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxTelefon.Location = new System.Drawing.Point(330, 251);
             this.textBoxTelefon.Name = "textBoxTelefon";
             this.textBoxTelefon.Size = new System.Drawing.Size(127, 20);
@@ -213,6 +223,7 @@
             // 
             // textBoxIme2
             // 
+            this.textBoxIme2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxIme2.Location = new System.Drawing.Point(73, 246);
             this.textBoxIme2.Name = "textBoxIme2";
             this.textBoxIme2.Size = new System.Drawing.Size(100, 20);
@@ -229,6 +240,7 @@
             // 
             // textBoxSifra
             // 
+            this.textBoxSifra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxSifra.Location = new System.Drawing.Point(330, 298);
             this.textBoxSifra.Name = "textBoxSifra";
             this.textBoxSifra.Size = new System.Drawing.Size(127, 20);
@@ -236,6 +248,7 @@
             // 
             // textBoxGrad
             // 
+            this.textBoxGrad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxGrad.Location = new System.Drawing.Point(73, 295);
             this.textBoxGrad.Name = "textBoxGrad";
             this.textBoxGrad.Size = new System.Drawing.Size(100, 20);
@@ -252,26 +265,31 @@
             // 
             // buttonAzuriranjeKupca
             // 
+            this.buttonAzuriranjeKupca.BackColor = System.Drawing.Color.DarkCyan;
+            this.buttonAzuriranjeKupca.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonAzuriranjeKupca.Location = new System.Drawing.Point(330, 400);
             this.buttonAzuriranjeKupca.Name = "buttonAzuriranjeKupca";
             this.buttonAzuriranjeKupca.Size = new System.Drawing.Size(127, 38);
             this.buttonAzuriranjeKupca.TabIndex = 12;
             this.buttonAzuriranjeKupca.Text = "Ažuriranje kupca";
-            this.buttonAzuriranjeKupca.UseVisualStyleBackColor = true;
+            this.buttonAzuriranjeKupca.UseVisualStyleBackColor = false;
             this.buttonAzuriranjeKupca.Click += new System.EventHandler(this.buttonAzuriranjeKupca_Click);
             // 
             // buttonKreiranjeKupca
             // 
+            this.buttonKreiranjeKupca.BackColor = System.Drawing.Color.DarkCyan;
+            this.buttonKreiranjeKupca.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonKreiranjeKupca.Location = new System.Drawing.Point(330, 355);
             this.buttonKreiranjeKupca.Name = "buttonKreiranjeKupca";
             this.buttonKreiranjeKupca.Size = new System.Drawing.Size(127, 39);
             this.buttonKreiranjeKupca.TabIndex = 11;
             this.buttonKreiranjeKupca.Text = "Kreiranje kupca";
-            this.buttonKreiranjeKupca.UseVisualStyleBackColor = true;
+            this.buttonKreiranjeKupca.UseVisualStyleBackColor = false;
             this.buttonKreiranjeKupca.Click += new System.EventHandler(this.buttonKreiranjeKupca_Click);
             // 
             // textBoxKorIme
             // 
+            this.textBoxKorIme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxKorIme.Location = new System.Drawing.Point(330, 275);
             this.textBoxKorIme.Name = "textBoxKorIme";
             this.textBoxKorIme.Size = new System.Drawing.Size(127, 20);
@@ -331,6 +349,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(503, 483);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);

@@ -60,6 +60,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 19);
             this.dataGridView1.Name = "dataGridView1";
@@ -77,6 +78,7 @@
             // 
             // textBoxID
             // 
+            this.textBoxID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxID.Location = new System.Drawing.Point(91, 229);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(77, 20);
@@ -84,12 +86,14 @@
             // 
             // buttonBrisanjeNarudzbe
             // 
+            this.buttonBrisanjeNarudzbe.BackColor = System.Drawing.Color.DarkCyan;
+            this.buttonBrisanjeNarudzbe.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonBrisanjeNarudzbe.Location = new System.Drawing.Point(174, 221);
             this.buttonBrisanjeNarudzbe.Name = "buttonBrisanjeNarudzbe";
             this.buttonBrisanjeNarudzbe.Size = new System.Drawing.Size(151, 35);
             this.buttonBrisanjeNarudzbe.TabIndex = 12;
             this.buttonBrisanjeNarudzbe.Text = "Brisanje narudžbe:";
-            this.buttonBrisanjeNarudzbe.UseVisualStyleBackColor = true;
+            this.buttonBrisanjeNarudzbe.UseVisualStyleBackColor = false;
             this.buttonBrisanjeNarudzbe.Click += new System.EventHandler(this.buttonBrisanjeNarudzbe_Click_1);
             // 
             // menuStrip1
@@ -104,6 +108,7 @@
             // 
             // meniToolStripMenuItem
             // 
+            this.meniToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.meniToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kreiranjeažuriranjeNovogKupcaToolStripMenuItem,
             this.dodavanjeažuriranjeNovogKupcaToolStripMenuItem,
@@ -145,6 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(509, 292);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
